@@ -1,5 +1,22 @@
 $(function(){
 
+$(window).load(function() {
+	
+	var preloaderDelay = 350,
+		preloaderFadeOutTime = 800;
+
+		function hidePreloader() {
+			var loadingAnimation = $('#Preloader'),
+				preloader = $('#Cargando');
+
+			loadingAnimation.fadeOut();
+			preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
+		}
+
+		hidePreloader();
+});
+
+
 var w = window.innerWidth;
 var h = window.innerHeight;
 var num = 1;

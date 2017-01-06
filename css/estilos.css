@@ -1,13 +1,35 @@
 * {
 	margin:0px;
 	padding:0px;
+	font-family: 'Rajdhani' , sans-serif;
   }
-				
+
+#Cargando{
+	width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+}
+
+#Preloader{
+	width: 60px;
+    height: 60px;
+    background-image: url(../img/Preloader_3.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 45%;
+    position: relative;
+}
+
 #header {
 	width: 140px;
     font-family: Arial, Helvetica, sans-serif;
     float: right;
     margin-top: 5%;;
+    position: relative;
+    z-index: 2;
 }
 			
 ul, ol {
@@ -368,6 +390,33 @@ ul, ol {
   transform:scale(1.25);
 }
 
+#descargar{
+	width: 235px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 45%;
+}
+
+#android{
+	position: relative;
+	width: 60%;
+	height: 100%;
+	background-image: url(../img/android.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	float: left;
+}
+#os{
+	position: relative;
+	width: 40%;
+	height: 100%;
+	background-image: url(../img/os.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	float: right;
+}
 
 /* Page nosotros */
 
@@ -406,6 +455,7 @@ ul, ol {
     height: 100%;
     position: absolute;
     left: 46%;
+    z-index: 1;
 }
 
 #foto1{
@@ -527,6 +577,104 @@ ul, ol {
 }
 /* Fin Nosotros */
 
+
+/* Caracteristicas */
+
+#fondoCaracteristicas{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/fondoCarcatersiticas.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#textos{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	float: left;
+
+}
+
+#tituloCaracteristicas{
+    position: absolute;
+	top: 10%;
+	left: 20%;
+}
+
+#divCaracteristicas{
+	position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+.caracteristica{
+	margin-top: 26px;
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+.icon{
+	position: relative;
+	top: 12px;
+    width: 20%;
+    height: 80%;
+	float: left;
+	background-image: url(../img/iconCaracteristica.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.textCaracteristica{
+	position: relative;
+    width: 65%;
+    height: 100%;
+    float: right;
+    color: white;
+}
+
+#btnRegistrate{
+	width: 100px;
+    height: 20px;
+    background-color: #079bc3;
+    border: solid 2px #079bc3;
+    padding: 5px;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+#btnRegistrate:hover{
+	background-color: rgba(7, 155, 195, 0.62);;
+}
+
+#fotosApp{
+	position: relative;
+    width: 50%;
+    height: 80%;
+    float: right;
+    z-index: 1;
+    top: 14%;
+}
+
+#celular{
+	width: 70%;
+    height: 105%;
+    position: absolute;
+    left: 20%;
+	background-image: url(../img/celular.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+/* Fin caracteristicas */
+
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
 and (min-device-width : 320px)
@@ -544,6 +692,108 @@ and (max-device-width : 480px) {
 	#header{
 		width: 85px;
 		margin-top: 30%;
+		margin-right: 10px;
+	}
+
+	#tituloNosotros{
+		width: 180px;
+    	height: 80px;
+    	top: 105px;
+    	left: 15px;
+	}
+	#textoNosotros{
+		width: 145px;
+	    height: 200px;
+	    top: 224px;
+	    left: 15px;
+	    font-size: 12px;
+	}
+
+	#fondoNosotros{
+		background-size: 120% 100%;
+	}
+
+	#fotosNosotros{
+		width: 42%;
+		left: 55%;
+	}
+
+	#footer{
+		left: 19%;
+	}
+
+	#foto1{
+		width: 70px;
+    	height: 90px;
+    	top: 35%;
+    	left: 28%;
+	}
+	#foto2{
+		width: 70px;
+    	height: 90px;
+    	top: 50%;
+    	left: 2%;
+	}
+
+	#foto3{
+		width: 70px;
+   	 	height: 90px;
+   		top: 50%;
+    	left: 50%;
+	}
+	#foto4{
+		width: 70px;
+    	height: 90px;
+    	left: 2%;
+	}
+	#foto5{
+		width: 70px;
+   		height: 90px;
+   		left: 50%;
+	}
+
+	#descargar {
+	    width: 225px;
+	    height: 50px;
+	    margin-left: 20%;
+	    margin-top: 150%;
+	}
+
+	#tituloCaracteristicas {
+	    width: 100%;
+	    top: 15%;
+	    left: 10%;
+	}
+
+	#divCaracteristicas {
+	    width: 88%;
+	    top: 24%;
+	    left: 5%;
+	}
+	.caracteristica {
+	    margin-top: 0px;
+	    position: relative;
+	    width: 100%;
+	    height: 80px;
+	    font-size: 9px;
+	}
+
+	.icon {
+	    position: relative;
+	    top: 40px;
+	    float: none;
+	    width: 28%;
+	    height: 40%;
+	}	
+
+	#fotosApp {
+	    position: relative;
+	    width: 65%;
+	    height: 60%;
+	    float: right;
+	    left: 24%;
+	    z-index: 1;
+	    top: 20%;
 	}
 }
 
@@ -564,6 +814,106 @@ and (max-device-width : 720px) {
 		width: 100px;
 		margin-top: 2%;
 	}
+    #tituloNosotros{
+		width: 220px;
+    	height: 120px;
+    	top: 5px;
+    	left: 45px;
+	}
+	#textoNosotros{
+		width: 220px;
+    	height: 200px;
+    	top: 140px;
+    	left: 45px;
+    	font-size: 13px;
+	}
+
+	#fondoNosotros{
+		background-size: 100% 100%;
+	}
+
+	#fotosNosotros{
+		width: 34%;
+    	left: 46%;
+	}
+
+	#footer{
+		left: 28%;
+		top: 92%;
+	}
+
+	#foto1{
+		width: 70px;
+    	height: 90px;
+    	top: 15%;
+    	left: 36%;
+	}
+	#foto2{
+		width: 70px;
+    	height: 90px;
+    	top: 40%;
+    	left: 10%;
+	}
+
+	#foto3{
+		width: 70px;
+   	 	height: 90px;
+   	 	top: 40%;
+    	left: 60%;
+	}
+	#foto4{
+		width: 70px;
+    	height: 90px;
+    	left: 10%;
+	}
+	#foto5{
+		width: 70px;
+   		height: 90px;
+   		left: 60%;
+	}
+
+	#descargar {
+	    width: 120px;
+	    height: 25px;
+	    margin-left: 80%;
+	    margin-top: 52%;
+	}
+	#tituloCaracteristicas {
+	    width: 100%;
+	    top: 2%;
+	    left: 10%;
+	}
+
+	#divCaracteristicas {
+	    width: 90%;
+	    top: 12%;
+	    left: 10%;
+	}
+	.caracteristica {
+	    margin-top: 4px;
+	    position: relative;
+	    width: 100%;
+	    height: 60px;
+	    font-size: 10px;
+	}
+
+	.icon {
+	    position: relative;
+	    top: 35px;
+	    float: none;
+	    width: 20%;
+	    height: 40%;
+	}	
+
+	#fotosApp {
+	    width: 50%;
+	    height: 70%;
+	    float: right;
+	    left: 15%;
+	    z-index: 1;
+	    top: 20%;
+	}
+
 }
 
 /* Smartphones (landscape) ----------- */
@@ -617,7 +967,73 @@ and (orientation : portrait) {
 
 	#header{
 		width: 115px;
-    	margin-top: 25%;
+    	margin-top: 14%;
+	}
+	#tituloNosotros{
+		width: 250px;
+    	height: 120px;
+    	top: 115px;
+    	left: 60px;
+	}
+	#textoNosotros{
+		width: 300px;
+    	height: 260px;
+    	top: 295px;
+    	left: 60px;
+    	font-size: 20px;
+	}
+
+	#fondoNosotros{
+		width: 112%;
+    	height: 112%;
+		background-size: 100% 100%;
+	}
+
+	#fotosNosotros{
+		width: 38%;
+    	height: 112%;
+    	left: 52%;
+	}
+
+	#footer{
+		left: 37%;
+    	top: 95%;
+	}
+
+	#foto1{
+		width: 100px;
+	    height: 120px;
+	    top: 25%;
+	    left: 35%;
+	}
+	#foto2{
+		width: 100px;
+	    height: 120px;
+    	top: 40%;
+    	left: 5%;
+	}
+
+	#foto3{
+		width: 100px;
+	    height: 120px;
+   	 	top: 40%;
+    	left: 60%;
+	}
+	#foto4{
+		width: 100px;
+	    height: 120px;
+    	left: 5%;
+    	top: 55%;
+	}
+	#foto5{
+		width: 100px;
+	    height: 120px;
+   		left: 60%;
+   		top: 55%;
+	}
+
+	#descargar{
+		margin-top: 140%;
 	}
 }
 
