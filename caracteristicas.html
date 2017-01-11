@@ -7,6 +7,11 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Boxo</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Rajdhani" rel="stylesheet">
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Compiled and minified CSS -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
+          
 		<link rel = "stylesheet" type = "text/css" href = "css/estilos.css">
 	    <link rel = "stylesheet" type = "text/css" href = "css/sweet-alert.css" >
 
@@ -21,6 +26,19 @@
           <div id="Preloader"></div>
     	</div>
 		<div id="fondoCaracteristicas">
+		<div id="menu">
+			<ul class="nav">
+				<li><a class="btn-floating btn-small blue"><i class="material-icons">menu</i></a>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="nosotros.html">Nosotros</a></li>
+						<li><a href="caracteristicas.html">Boxo</a></li>
+						<li><a href="">Escribenos</a></li>
+						<li><a href="">Registrate</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 		<div id="header">
 			<ul class="nav">
 				<li><img src="img/logo.png" id="btnMenu">
@@ -41,11 +59,6 @@
 				<h3 style="color: white;">Subtitulo Lorem ipsum dolor sit amet</h3>
 			</div>
 			<div id="divCaracteristicas">
-				<div class="caracteristica">
-					<div class="icon"></div>
-					<div class="textCaracteristica"><p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
-				</div>
 				<div class="caracteristica">
 					<div class="icon"></div>
 					<div class="textCaracteristica"><p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -76,8 +89,10 @@
 		<div id="footer"><div id="textFooter"></div><div id="face"></div><div id="gmail"></div></div>
 		</div>
 	</body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 	<script src = "js/sweet-alert.js"></script>
-	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src = "js/jquery.path.js"></script>
 	<script src = "js/script.js"></script>
 </html>
