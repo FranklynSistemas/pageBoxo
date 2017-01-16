@@ -71,7 +71,7 @@ var xIni,yIni,xFin,Yfin;
  $("#divTest").animate({path : new $.path.bezier(bezier_params)},3000).fadeOut(50);
  
 }
-/*
+
 globoDerecha();
 nubes01Derecha();
 nubes02Izquierda();
@@ -80,7 +80,7 @@ autoDerecha();
 biciIzquierda();
 motoDerecha();
 personIzquierda();
-*/
+
 
 $('#globo').css("height","80px");
 function globoArriba(){
