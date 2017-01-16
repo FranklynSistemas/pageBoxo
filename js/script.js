@@ -20,6 +20,13 @@ $(window).load(function() {
 var w = window.innerWidth;
 var h = window.innerHeight;
 var num = 1;
+/*function init(){
+	if($.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))){
+    	alert('Hola! Entras desde un dispositivo móvil o tablet!');
+	}
+} */
+
+
 $("#divTest").fadeOut(0);
 
 function animiation(type){
@@ -64,14 +71,238 @@ var xIni,yIni,xFin,Yfin;
  $("#divTest").animate({path : new $.path.bezier(bezier_params)},3000).fadeOut(50);
  
 }
+/*
+globoDerecha();
+nubes01Derecha();
+nubes02Izquierda();
+nubes03Derecha();
+autoDerecha();
+biciIzquierda();
+motoDerecha();
+personIzquierda();
+*/
 
-/*var interval = setInterval(function(){
+$('#globo').css("height","80px");
+function globoArriba(){
+	$('#gifGlobo').css("margin-top","0px").animate({
+			marginTop: "20px"
+		},
+			{
+		     easing: 'swing',
+		     duration: 2000,
+		     complete: function(){
+		        globoAbajo();
+		    }
+		});
+}
+
+function globoAbajo(){
+	$('#gifGlobo').css("margin-top","20px").animate({
+			marginTop: "0px"
+		},
+			{
+		     easing: 'swing',
+		     duration: 2000,
+		     complete: function(){
+		        globoArriba();
+		    }
+		});
+}
+
+
+function globoDerecha(){
+	setTimeout(function(){
+		globoArriba();
+		$('#globo').animate({
+	        width: "110%"
+		}, {
+		     easing: 'linear',
+		     duration: 60000,
+		     complete: function(){
+		        globoIzquierda();
+		    }
+		})
+	},1000);
+} 
+
+
+
+
+function globoIzquierda(){
+	setTimeout(function(){
+		$('#globo').css("width", "110%").animate({
+			width: "0px"
+		},{
+			easing: 'linear',
+		    duration: 60000,
+		    complete: function(){
+		        globoDerecha();
+		    }
+		})
+	},1000);
+}
+
+
+function nubes01Derecha(){
+	setTimeout(function(){
+		$('#nube1').animate({
+	        width: "110%"
+		}, {
+		     easing: 'linear',
+		     duration: 150000,
+		     complete: function(){
+		        nubes01Izquierda();
+		    }
+		})
+	},10000);
+} 
+
+function nubes01Izquierda(){
+	setTimeout(function(){
+		$('#nube1').css("width", "110%").animate({
+			width: "0px"
+		},{
+			easing: 'linear',
+		    duration: 150000,
+		    complete: function(){
+		        nubes01Derecha();
+		    }
+		})
+	},10000);
+}
+
+function nubes02Derecha(){
+	setTimeout(function(){
+		$('#nube2').animate({
+	        width: "110%"
+		}, {
+		     easing: 'linear',
+		     duration: 120000,
+		     complete: function(){
+		        nubes02Izquierda();
+		    }
+		})
+	},2000);
+} 
+
+$('#nube2').css("top", "130px");
+$('#nube3').css("top", "200px");
+
+function nubes02Izquierda(){	
+	setTimeout(function(){
+		$('#nube2').css("width", "110%").animate({
+			width: "0px"
+		},{
+			easing: 'linear',
+		    duration: 120000,
+		    complete: function(){
+		        nubes02Derecha();
+		    }
+		})
+	},2000);
+} 
+
+function nubes03Derecha(){
+	setTimeout(function(){
+		$('#nube3').animate({
+	        width: "110%"
+		}, {
+		     easing: 'linear',
+		     duration: 130000,
+		     complete: function(){
+		        nubes03Izquierda();
+		    }
+		})
+	},100);
+} 
+
+function nubes03Izquierda(){
+	setTimeout(function(){
+		$('#nube3').css("width", "110%").animate({
+			width: "0px"
+		},{
+			easing: 'linear',
+		    duration: 130000,
+		    complete: function(){
+		        nubes03Derecha();
+		    }
+		})
+	},100);
+} 
+
+$('#bici').css("z-index","1");
+$('#moto').css("z-index","2");
+$('#auto').css("z-index","3");
+
+
+function autoDerecha(){
+	setTimeout(function(){
+		$('#auto').css("width", "0px").animate({
+	        width: "130%"
+		}, {
+		     easing: 'linear',
+		     duration: 10000,
+		     complete: function(){
+		        autoDerecha();
+		    }
+		})
+	},1000);
+} 
+
+
+function biciIzquierda(){
+	setTimeout(function(){
+		$('#bici').css("width", "110%").animate({
+			width: "0px"
+		},{
+			easing: 'linear',
+		    duration: 20000,
+		    complete: function(){
+		        biciIzquierda();
+		    }
+		})
+	},100);
+} 
+
+
+function motoDerecha(){
+	setTimeout(function(){
+		$('#moto').css("width", "0px").animate({
+	        width: "130%"
+		}, {
+		     easing: 'linear',
+		     duration: 7000,
+		     complete: function(){
+		     	$('#moto').css("width", "0px");
+		        motoDerecha();
+		    }
+		})
+	},1000);
+} 
+
+function personIzquierda(){
+	setTimeout(function(){
+		$('#person').css("width", "110%").animate({
+			width: "0px"
+		},{
+			easing: 'linear',
+		    duration: 25000,
+		    complete: function(){
+		        personIzquierda();
+		    }
+		})
+	},4500);
+} 
+
+/*
+var interval = setInterval(function(){
 	     num *= -1;
+	     console.log(num);
 	     $("#divTest").fadeIn(50);
 		 animiation(num);
-},4000);*/
+},4000);
 
-
+*/
 
 
 

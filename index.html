@@ -6,14 +6,16 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Boxo</title>
+		<link href="https://fonts.googleapis.com/css?family=Pavanam" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Rajdhani" rel="stylesheet">
 		<!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!-- Compiled and minified CSS -->
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection">
-          
+    	
+    	<link rel = "stylesheet" type = "text/css" href = "css/sweet-alert.css" >      
 		<link rel = "stylesheet" type = "text/css" href = "css/estilos.css">
-	    <link rel = "stylesheet" type = "text/css" href = "css/sweet-alert.css" >
+	
 
 	    <!--Fav and touch icons-->
 	    <link rel="shortcut icon" href="img/icon.png">
@@ -26,6 +28,7 @@
           <div id="Preloader"></div>
     	</div>
 		<div id="fondo">
+		<div id="edificios"></div>
 		<!--<div class="fixed-action-btn vertical click-to-toggle">
 		    <a class="btn-floating btn-large blue">
 		      <i class="material-icons">menu</i>
@@ -42,20 +45,20 @@
 		      <li class="waves-effect waves-light"><a href="#!">Registrate</a></li>
 		    </ul>
 		  </div>-->
-
+		  
 		  <div id="menu">
 			<ul class="nav">
 				<li><a class="btn-floating btn-small blue"><i class="material-icons">menu</i></a>
 					<ul>
 						<li><a href="index.html">Inicio</a></li>
-						<li><a href="nosotros.html">Nosotros</a></li>
-						<li><a href="caracteristicas.html">Boxo</a></li>
-						<li><a href="">Escribenos</a></li>
+						<li><a href="caracteristicas.html">Que Somos</a></li>
 						<li><a href="">Registrate</a></li>
+						<li><a href="">Boxoempresa</a></li>
+						<li><a href="">Contácto</a></li>
 					</ul>
 				</li>
 			</ul>
-		  </div>
+		  </div> 
 		<!--
 		<div class="fixed-action-btn toolbar">
 		    <a class="btn-floating btn-large blue">
@@ -87,14 +90,20 @@
 		    </ul>
 		  </div>-->
 		
-
-		<div id="divTest" ></div>
+		<div id="navMenu">
+			<a class="navA" href="index.html" style="border-bottom: solid 5px #079bc3;">Inicio <!--<span class="barra"></span>--></a>
+			<a class="navA" href="caracteristicas.html">Que Somos</a>
+			<a class="navA" href="">Registrate</a>
+			<a class="navA" href="">Boxoempresa</a>
+			<a class="navA" href="">Contácto</a>
+		</div>
+		<div id="divTest"></div>
 		<div id="titulo"></div>
 		<div id="divBtnIniciar"><div id="imgBoton"></div><h3 id="divIniciar">Iniciar</h3></div>
 
 		<div id="header">
-			<ul class="nav">
-				<li><img src="img/logo.png" id="btnMenu">
+			<!--<ul class="nav">-->
+				<!--<li><img src="img/logo.png" id="btnMenu">-->
 					<!--<ul>
 						<li><a href="index.html"><img src="img/inicio.png" id="inicio"></a></li>
 						<li><a href="nosotros.html"><img src="img/nosotros.png" id="nosotros"></a></li>
@@ -102,14 +111,39 @@
 						<li><img src="img/escribenos.png" id="escribenos"></li>
 						<li><img src="img/registro.png" id="registro"></li>
 					</ul>-->
-				</li>
-			</ul>
+				<!--</li>
+			</ul>-->
 		</div>
 		<!--<div id="descargar">
 			<div id="android"></div>
 			<div id="os"></div>
 		</div>-->
-		<div id="footer"><div id="textFooter"></div><div id="face"></div><div id="gmail"></div></div>
+		<div id="divGrua"></div>
+		<div class="divPrueba" id="globo">
+			<div id="gifGlobo"></div>
+		</div>
+		<div class="divPrueba" id="nube1">
+			<div id="gifNube"></div>
+		</div>
+		<div class="divPrueba" id="nube2">
+			<div id="gifNube"></div>
+		</div>
+		<div class="divPrueba" id="nube3">
+			<div id="gifNube"></div>
+		</div>
+		<div class="divVihiculos" id="auto">
+			<div id="gifAuto"></div>
+		</div>
+		<div class="divVihiculos" id="bici">
+			<div id="gifBici"></div>
+		</div>
+		<div class="divVihiculos" id="moto">
+			<div id="gifMoto"></div>
+		</div>
+		<div class="divVihiculos" id="person">
+			<div id="gifPersona"></div>
+		</div>
+		<!--<div id="footer"><div id="textFooter"></div><div id="face"></div><div id="gmail"></div></div>-->
 		</div>
 	</body>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
