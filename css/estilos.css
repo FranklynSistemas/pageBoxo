@@ -1386,8 +1386,19 @@ and (orientation : portrait) {
 
 /* Desktops and laptops ----------- */
 @media only screen
-and (min-width : 1224px) {
+and (min-height: 660px) and (min-width : 1365px){
+/* Styles */
+	#divGrua{
+		bottom: 185px;
+	}
+}
+
+@media only screen
+and (min-width : 1424px) {
 /* STYLES GO HERE */
+	#divGrua{
+		bottom: 228px;
+	}
 }
 
 /* Large screens ----------- */
