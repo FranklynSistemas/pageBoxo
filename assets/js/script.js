@@ -14,13 +14,14 @@ $(window).load(function() {
 		}
 
 		hidePreloader();
+		text();
 });
 
 function showbtn(){
 	$("#flecha").fadeIn(5);
 }
 
-(function text(){
+function text(){
 	//strings: ["Boxo, una plataforma innovadora de mensajeria", "necesitas pedir o enviar algo Boxo es tu mejor opción !"]
 	$(".textIni").typed({
         strings: ["¿ Necesitas enviar o pedir algo ?", "<strong>Boxo</strong> te ayuda fácil y rápido a solucionar tu problema !"],
@@ -29,7 +30,7 @@ function showbtn(){
         cursorChar: "|",
         callback: function(){ showbtn(); }
  });
-})();
+};
 
 
 
