@@ -1,0 +1,1078 @@
+*{
+	overflow-x: hidden;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+	height: 100%;
+
+}
+
+/* Typed */
+.typed-cursor{
+	display: none;
+}
+
+/*
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+*/
+/*  Fin Typed */
+
+/* flecha abajo en movimiento */
+/* buscamos el selector que sea la flecha (en este caso la selección está sacada de un theme de ejemplo) */
+#flecha{
+	cursor: pointer;
+	z-index: 9;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+	overflow-y: hidden;
+	display: none;
+}
+.hero-btn-holder{
+	-webkit-animation: jumpInc 2s infinite;
+       -moz-animation: jumpInc 2s infinite;
+         -o-animation: jumpInc 2s infinite;
+            animation: jumpInc 2s infinite;
+}
+
+.hero-btn-holder a{
+	border-bottom: dotted 0px rgba(128, 128, 128, 0.5); */
+}
+
+@-webkit-keyframes jumpInc {
+	0%   {
+		margin-top: -122%;
+		opacity: 0;
+	}
+	50%  {
+		margin-top: 0%;
+		opacity: 1;
+	}
+	100% {
+		margin-top: 122%;
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes jumpInc {
+	0%   {
+		margin-top: -122%;
+		opacity: 0;
+	}
+	50%  {
+		margin-top: 0%;
+		opacity: 1;
+	}
+	100% {
+		margin-top: 122%;
+		opacity: 0;
+	}
+}
+@-o-keyframes jumpInc {
+	0%   {
+		margin-top: -122%;
+		opacity: 0;
+	}
+	50%  {
+		margin-top: 0%;
+		opacity: 1;
+	}
+	100% {
+		margin-top: 122%;
+		opacity: 0;
+	}
+}
+@keyframes jumpInc {
+	0%   {
+		margin-top: -122%;
+		opacity: 0;
+	}
+	50%  {
+		margin-top: 0%;
+		opacity: 1;
+	}
+	100% {
+		margin-top: 122%;
+		opacity: 0;
+	}
+}
+
+/* /flecha abajo */
+
+
+.textIni{
+	width: 100%;
+    height: 90px;
+    /*background-color: rgba(8, 8, 8, 0.45);*/
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+}
+
+
+#Cargando{
+	width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+}
+
+#Preloader{
+	width: 60px;
+    height: 60px;
+    background-image: url(../../images/Preloader_3.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    top: 45%;
+    position: relative;
+}
+
+
+#logoImg{
+	width: 60%;
+    height: 65px;
+    position: relative;
+    margin: 0 auto;
+    background-image: url(../../images/logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#nav ul li a.active span:before {
+    color: #009ac4;
+}
+#nav ul li a span {
+	overflow-x: visible;
+}
+
+#headerToggle{
+	height: 3em !important;
+	width: 3.60em !important;
+}
+
+#main > section.one {
+	background-image: url(../../images/fondo.png);
+    background-repeat: no-repeat;
+    overflow-x:hidden;
+}
+
+#main section.cover {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    height: 100vh;
+}
+
+
+#titulo{
+	width: 300px;
+    height: 70px;
+    background-image: url(../../images/tituloBoxoDesafio.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    /* margin-left: 41%; */
+    /* margin-top: 125px; */
+    margin: 0 auto;
+    z-index: 3;
+}
+
+#divBtnIniciar{
+    width: 90px;
+    height: 90px;
+    border: solid 2px white;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    /* margin-left: 48%; */
+    margin-top: 15px;
+    background-color: #009ac4;
+    -moz-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+    overflow-x: initial;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#divBtnIniciar:hover{
+	background-color: rgba(240, 248, 255, 0);
+}
+
+#divIniciar{
+	font-family: 'Pavanam' , sans-serif;
+	width: 65px;
+    margin-top: 30px;
+    margin-left: 15px;
+    color: white;
+    font-size: 1.80rem;
+	height:0;
+    overflow:hidden;
+    -moz-transition-duration:.2s;
+    -webkit-transition-duration:.2s;
+    -o-transition-duration:.2s;
+    transition-duration:.2s;
+
+}
+
+#textIniciar{
+	font-family: 'Pavanam', Helvetica, sans-serif;
+	font-size: 1.60rem;
+    line-height: 110%;
+    color: white;
+    margin-top: 5px;
+    margin-left: 2px;
+    overflow-x: inherit;
+}
+
+#central{
+	position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 230px;
+    margin-top: -350px;
+    overflow-x: visible;
+}
+
+#imgBoton{
+	position: relative;
+    top: 16px;
+    left: 16px;
+    width: 38px;
+    height: 48px;
+    background-image: url(../../images/boxoDesafio.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#edificios{
+	position: relative;
+    width: 100%;
+    height: 70%;
+    top: 32%;
+    background-image: url(../../images/ciudad.gif);
+    background-size: contain;
+    background-repeat: repeat-x;
+    z-index: 1;
+}
+
+/* Animaciones */ 
+/*#divGrua{
+	width: 30px;
+	height: 45px;
+	position: absolute;
+	background-image: url(../../images/grua.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin-left: 85%;
+	bottom: 182px;
+	z-index: 2;
+}*/
+
+.divPrueba{
+	width: 0px;
+    height: 60px;
+    top: 90px;
+    position: absolute;	
+    z-index: 2;
+}
+
+.divVihiculos{
+	width: 0px;
+    height: 75px;
+    bottom: 0px;
+    position: absolute;	
+    z-index: 2;
+}
+
+#gifGlobo{
+	width: 30px;
+	height: 45px;
+	background-image: url(../../images/globo.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+}
+
+#gifNube{
+	width: 80px;
+	height: 40px;
+	background-image: url(../../images/nube01.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+}
+    
+#gifPersona{
+	margin-top: -10px;
+	width: 80px;
+	height: 40px;
+	background-image: url(../../images/persona.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+}
+
+
+#divTest{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	margin-left: 120px;
+	margin-top: 120px;
+	position: absolute;
+}
+
+#gifAuto{
+	margin-top: 15px;
+	width: 100px;
+	height: 60px;
+	background-image: url(../../images/auto.gif);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+}
+
+#gifBici{
+	margin-top: 15px;
+	width: 40px;
+	height: 32px;
+	background-image: url(../../images/bici.gif);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+}
+
+#gifMoto{
+	margin-top: 12px;
+	margin-top: 20px;
+	width: 50px;
+	height: 42px;
+	background-image: url(../../images/moto.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+}
+
+/* Fin Animacion */
+
+
+/* Caracteristicas */
+
+#main > section.two{
+	background-image: url(../../images/fondoCarcatersiticas.png);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	padding:0;
+    height: 120vh;
+}
+/*
+#fondoCaracteristicas{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/fondoCarcatersiticas.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}*/
+
+#textos{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	float: left;
+
+}
+
+#tituloCaracteristicas{
+    position: absolute;
+	top: 10%;
+	left: 2%;
+	width: 65%;
+}
+
+#tituloCaracteristicas h1{
+	color: #079bc3; 
+	font-size: 3.2rem;
+}
+
+#tituloCaracteristicas h3{
+	color: white;
+	font-size:  1.20rem;
+}
+
+#subtitulo{
+    font-size: 25px;
+    line-height: 25px;
+    overflow-y: hidden;
+} 
+	
+
+#divCaracteristicas{
+	position: absolute;
+    width: 65%;
+    height: 60%;
+    top:  35%;
+    left: 2%;
+
+}
+
+header{
+	overflow-y: hidden;
+	margin-top: 20px;
+}
+.row{
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+ #first{
+ 	color: white;
+ 	margin-bottom: 30px;
+ }
+
+.caracteristica{
+	overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 98px;
+    background-color: rgba(0, 154, 196, 0.32);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.textosC{
+	font-size: 18px;
+    line-height: 20px;
+    overflow-x: visible;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.05em rgba(51, 51, 51, 0.81);
+}
+
+#tituloC{
+	line-height: 1em;
+	overflow-x: visible;
+	
+}
+.iconC{
+	position: relative;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+#icon01{
+	background-image: url(../../images/iconos01.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#icon02{
+	background-image: url(../../images/iconos02.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#icon03{
+	background-image: url(../../images/iconos03.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.textCaracteristica{
+	position: relative;
+    width: 75%;
+    height: 100%;
+    float: right;
+    color: white;
+    overflow-x: visible;
+}
+#face{
+	width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../../images/facebookGris.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 6px;
+    left: 174px;
+}
+
+#gmail{
+	width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../../images/gmailGris.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 6px;
+    left: 200px;
+}
+
+#android{
+	position: relative;
+    width: 45%;
+    height: 100%;
+    background-image: url(../../images/androidNegro.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    float: left;
+}
+#os{
+	position: relative;
+    width: 45%;
+    height: 100%;
+    background-image: url(../../images/osNegro.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+#descargar{
+	width: 270px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 30%;
+    margin-top: 40px;
+    position: relative;
+    z-index: 4;
+}
+
+#fotosApp{
+	position: relative;
+    width: 600px;
+    height: 500px;
+    float: right;
+    margin-top: 12%;
+    z-index: 1;
+    overflow-y: hidden;
+}
+
+#celular{
+	width: 400px;
+    height: 600px;
+    position: relative;
+    left: 10%;
+    margin-top: -80px;
+    background-image: url(../../images/celular.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Fin Caracteristicas */
+
+/* Registrate  */
+#main > section.three {
+    background-color: #2f3f4e;
+    color: white;
+}
+
+#banner{
+	width: 60%;
+}
+
+.registro{
+	margin-top: 0px;
+    padding-top: 0px;
+}
+
+/*   */
+
+
+
+input[type="button"], input[type="submit"], input[type="reset"], button, .button {
+	background-color: #009ac4;
+}
+
+input[type="submit"]:hover{
+	background-color: rgba(0, 154, 196, 0.66);
+}
+
+#footer .copyright li {
+    overflow-x: visible;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+	#main > section.one {
+		background-color: #2f3f4e;
+		background-size: 100% 50%;
+    	background-position: bottom;
+	}
+	
+	/*#main section.cover{
+		height: 93vh;
+	}*/
+
+	.row{
+		margin-top: 25px;
+    	padding-top: 0px;
+	}
+
+	#celular{
+		display: none;
+	}
+	#edificios{
+		background-size: contain;
+		top: 68%;
+	}
+
+	#divBtnIniciar{
+		margin-left: 37%;
+	    margin-top: 5%;
+	    position: relative;
+	}
+
+	#titulo{
+		margin-left: 10%;
+	    margin-top: 30%;
+	    position: relative;
+	}
+
+	#tituloNosotros{
+		width: 180px;
+    	height: 80px;
+    	top: 80px;
+    	left: 15px;
+	}
+	#textoNosotros{
+		width: 145px;
+	    height: 200px;
+	    top: 224px;
+	    left: 15px;
+	    font-size: 12px;
+	}
+
+	#fondoNosotros{
+		background-size: 120% 100%;
+	}
+
+	#fotosNosotros{
+		width: 42%;
+		left: 55%;
+	}
+
+	#footer{
+		left: 19%;
+	}
+
+	#descargar {
+	    margin-left: 11%;
+	}
+
+	#tituloCaracteristicas {
+	    width: 100%;
+	    top: 10%;
+	    left: 7%; 
+	}
+
+	#tituloCaracteristicas h1 {
+		font-size: 2.2rem;
+	}
+
+	#tituloCaracteristicas h3 {
+		font-size: 1.92rem;
+	}
+
+
+	#divCaracteristicas {
+	    width: 88%;
+	    top: 35%;
+	    left: 5%;
+	}
+	.caracteristica {
+	    margin-top: 0px;
+	    position: relative;
+	    width: 100%;
+	    height: 80px;
+	    font-size: 9px;
+	}
+
+	 #first{
+ 		color: white;
+ 	}
+
+ 	#textCaract{
+ 		margin-top: -20px;
+ 	}
+
+	.textosC {
+	    font-size: 14px;
+	    line-height: 12px;
+	    overflow-x: visible;
+	}
+	#fotosApp {
+	    position: relative;
+	    width: 70%;
+	    height: 42%;
+	    float: right;
+	    left: 7%;
+	    z-index: 1;
+	    top: 28%;
+	}
+	#btnRegistrate{
+		top: 40px;
+    	left: 120px;
+	}
+
+	/* Animación */
+	.divVihiculos{
+		bottom: -12px;
+	}
+	#gifNube{
+		width: 60px;
+		height: 20px;
+	}
+
+	#gifAuto{
+		margin-top: 30px;
+		width: 80px;
+		height: 45px;
+	}
+
+	#gifBici{
+		margin-top: 37px;
+		width: 20px;
+		height: 12px;
+	}
+
+	#gifMoto{
+		margin-top: 40px;
+		width: 30px;
+		height: 22px;
+	}
+
+	#gifPersona{
+		margin-top: 15px;
+		width: 60px;
+		height: 25px;
+	}
+	/*  Fin Animación */
+}
+
+@media only screen
+and (min-device-width : 600px)
+and (max-device-width : 720px) {
+	#divBtnIniciar{
+		margin-left: 45%;
+    	margin-top: 2%;
+	}
+
+	#titulo{
+		margin-left: 28%;
+    	margin-top: 25%;
+	}
+
+	.divVihiculos{
+		bottom: -5px;
+	}
+
+    #tituloNosotros{
+		width: 220px;
+    	height: 120px;
+    	top: 5px;
+    	left: 45px;
+	}
+	#textoNosotros{
+		width: 220px;
+    	height: 200px;
+    	top: 140px;
+    	left: 45px;
+    	font-size: 13px;
+	}
+
+	#fondoNosotros{
+		background-size: 100% 100%;
+	}
+
+	#fotosNosotros{
+		width: 34%;
+    	left: 46%;
+	}
+
+	#footer{
+		left: 28%;
+		top: 92%;
+	}
+
+	#descargar {
+	    width: 120px;
+	    height: 25px;
+	    margin-left: 80%;
+	    margin-top: 52%;
+	}
+	#tituloCaracteristicas {
+	    width: 100%;
+	    top: 10%;
+	    left: 10%;
+	}
+
+	#first{
+ 		color: black;
+ 	}
+
+ 	.row{
+ 		margin-top: -20px;
+ 		padding-top: 0px;
+ 	}
+
+ 	.iconC{
+ 		top: 0px;
+	    width: 60px;
+	    height: 60px;
+ 	}
+	#tituloCaracteristicas h1 {
+		font-size: 1.5rem;
+		line-height: 0;
+		margin: 3.1rem 0 1.68rem 0;
+	}
+
+	#tituloCaracteristicas h3 {
+		font-size: 1.2rem;
+		line-height: 1;
+	}
+	#divCaracteristicas {
+	    width: 100%;
+	    top: 27%;
+	    left: 10%;
+	}
+	.textCaracteristica{
+		width: 80%;
+	}
+	.caracteristica {
+	    margin-top: 4px;
+	    position: relative;
+	    width: 100%;
+	    height: 60px;
+	    font-size: 10px;
+	}	
+
+	#fotosApp {
+	    width: 50%;
+	    height: 70%;
+	    float: right;
+	    left: 15%;
+	    z-index: 1;
+	    top: 20%;
+	}
+
+	/* Animación */
+	#edificios{
+		bottom: 12px;
+	}
+	#divGrua{
+		width: 15px;
+    	height: 30px;
+    	margin-left: 84%;
+    	bottom: 96px;
+	}
+	#gifNube{
+		width: 60px;
+		height: 20px;
+	}
+
+	#gifAuto{
+		margin-top: 30px;
+		width: 80px;
+		height: 45px;
+	}
+
+	#gifBici{
+		margin-top: 37px;
+		width: 20px;
+		height: 12px;
+	}
+
+	#gifMoto{
+		margin-top: 40px;
+		width: 30px;
+		height: 22px;
+	}
+
+	#gifPersona{
+		margin-top: 15px;
+		width: 60px;
+		height: 25px;
+	}
+	/*  Fin Animación */
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	#main > section.one {
+		background-color: #2f3f4e;
+		background-size: 100% 50%;
+    	background-position: bottom;
+	}
+	#header{
+		position: fixed;	
+	}
+	#edificios{
+		background-size: contain;
+		top: 45%;
+	}
+	#central{
+		margin-top: -520px;
+	}
+	#divBtnIniciar{
+		margin-left: 38%;
+    	margin-top: 2%;
+	}
+	#titulo{
+		margin-left: 25%;
+    	margin-top: 25%;
+	}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	#main > section.one {
+		background-color: #2f3f4e;
+		background-size: 100% 50%;
+    	background-position: bottom;
+	}
+
+	#edificios{
+		background-size: contain;
+		top: 63%;
+	}
+
+	#divBtnIniciar{
+		margin-left: 43%;
+    	margin-top: 3%;
+	}
+
+	#tituloNosotros{
+		width: 250px;
+    	height: 120px;
+    	top: 115px;
+    	left: 60px;
+	}
+	#textoNosotros{
+		width: 300px;
+    	height: 260px;
+    	top: 295px;
+    	left: 60px;
+    	font-size: 20px;
+	}
+
+	#fondoNosotros{
+		width: 112%;
+    	height: 112%;
+		background-size: 100% 100%;
+	}
+
+	#fotosNosotros{
+		width: 38%;
+    	height: 112%;
+    	left: 52%;
+	}
+
+	#footer{
+		left: 37%;
+    	top: 95%;
+	}
+
+	#descargar{
+		margin-top: 140%;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-height: 660px) and (min-width : 1365px){
+/* Styles */
+}
+
+@media only screen
+and (min-width : 800px) {
+	
+
+}
+
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+}
+
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
