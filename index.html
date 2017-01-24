@@ -10,6 +10,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!-- Bootstrap -->
+    	<link href="assets/css/bootstrap.css" rel="stylesheet">
+    	<!-- Animate.css -->
+    	<link rel="stylesheet" href="assets/css/animate.css">
+
 		<link href="https://fonts.googleapis.com/css?family=Pavanam" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
@@ -55,7 +60,9 @@
 							-->
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Características</span></a></li>
+								<li><a href="#servicio" id="servicio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Que es</span></a></li>
+								<li><a href="#simulador" id="simulador-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Simulador</span></a></li>
+								<li><a href="#empresas" id="empresas-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Empresas</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Registrate</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contácto</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Boxoempresa</span></a></li>
@@ -71,8 +78,6 @@
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 
@@ -87,13 +92,14 @@
 					<section id="top" class="one dark cover">
 					<div id="edificios"></div>
 					<div id="central">
-						<div id="titulo"></div>
-						<!--<div id="divBtnIniciar"><div id="imgBoton"></div><h3 id="divIniciar">Iniciar</h3></div>-->
-						<div id="divBtnIniciar"><div id="imgBoton"></div><h3 id="textIniciar">iniciar</h3></div>
+						<!--<div id="titulo"></div>
+						<div id="divBtnIniciar"><div id="imgBoton"></div><h3 id="divIniciar">Iniciar</h3></div>
+						<div id="divBtnIniciar"><div id="imgBoton"></div><h3 id="textIniciar">iniciar</h3></div>-->
+						<div class="LogoInit"></div>
 						<div class="textIni"></div>
 						<div id="flecha">
 							<span class="hero-btn-holder" >
-							   <a  href="#portfolio" id="portfolio-link">
+							   <a href="#servicio" id="servicioLink" class="skel-layers-ignoreHref">
 							         <i style="color: #ffffff;" class="fa fa-angle-down fa-4x ut-service-box-icon"></i>
 							   </a>
 							</span>
@@ -141,8 +147,76 @@
 
 						<!--</div>-->
 					</section>
-
-				<!-- Portfolio -->
+					<section id="servicio" class="srs">
+						<div class="container">
+					        <div class="row">
+					          <div class="col-sm-12 text-center">
+					            <div class="title wow fadeInRight">
+					              <div class="LogoInit"></div>
+					            </div>
+					              <h3>Lo quieres, Lo pides, Lo tienes</h3>
+					              <h4>Boxo es una plataforma logística urbana que optimiza la forma en que las mercancias y las personas viajan dentro de las ciudades.</h4>
+					          </div>
+					        </div>
+					        <div class="row" style="margin-top: 20px;">
+					          <div class="col-sm-4">
+					            <div class="app-block wow bounceInUp" data-wow-delay=".1s">
+					              <h2><b>Bajo costo</b></h2>
+					              <i class="fa fa-money iconS"></i> 
+					              <p align="center">Hacemos tus envios con los mejores costos del mercado ! </p>
+					            </div>            
+					          </div>
+					          <div class="col-sm-4">
+					            <div class="app-block wow bounceInUp" data-wow-delay=".2s">
+					              <h2><b>Rápido</b></h2>
+					              <i class="fa fa-bolt iconS"></i>
+					              <p align="center">Llevamos tus envios rapido y si nos demoramos 20 minutos más de lo estipulado para el envio, tu servicio es <b>Gratis.</b></p>
+					            </div>            
+					          </div>
+					          <div class="col-sm-4">
+					            <div class="app-block wow bounceInUp" data-wow-delay=".3s">
+					              <h2><b>Seguro</b></h2>
+					              <i class="fa fa-lock iconS"></i> 
+					              <p align="center">Garantizamos la entrega segura de tus paquetes</p>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					</section>
+					<section id="simulador" class="sim">
+						<div class="container">
+					        <div class="row">
+					        	<div class="col-sm-12 text-center">
+						            <div class="title wow fadeInRight">
+							              <h2 id="simTitulo">Simulador</h2>
+							              <h4 id="simSubTitulo">Ingresa los siguientes datos y descubre las ventajas de enviar paquetes con nosotros.</h4>
+						            </div>
+					            </div>
+					            </div>
+					        	<form method="post" action="#" style="width: 100%; overflow-y: hidden;">
+						        	<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".1s"><input class="intputSim" type="text" name="origen" placeholder="Origen Ejem. Calle 87 # 67 -63 " /></div>
+									<div class="12u$ 12u$(mobile)  wow bounceInUp" data-wow-delay=".2s"><input class="intputSim" type="text" name="destino" placeholder="Destino Ejem. Calle 87 # 67 -63" /></div>
+									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".3s"><input class="intputSim" type="number" name="valor" placeholder="Valoración de paquete Ejem. 50.000" /></div>
+									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".4s"><input type="submit" value="Simular envio" /></div>
+								</form>
+					        </div>
+					</section>
+					<section id="empresas" class="emp">
+						<div class="container">
+					        <div class="row">
+					        	<div class="col-sm-12 text-center" style="    	margin-top: 12%;
+																			    background-color: rgba(43, 81, 111, 0.85);
+																			    border-radius: 25px;">
+						            <div class="title wow fadeInRight" style="margin-top: -40px;">
+							              <h2 id="empTitulo">Empresas</h2>
+							              <h4 id="empSubTitulo">Conoce las ventajas de mensajaria que tenemos para ti.</h4>
+						            </div>
+					            </div>
+					        </div>
+					        <div id="btnConocerMas"><span>Conocer Más</span></div>
+					    </div>
+					</section>
+				<!-- Portfolio 
 					<section id="portfolio" class="two">
 						<div class="container">
 							<header>
@@ -151,7 +225,7 @@
 
 							<p id="subtitulo" align="justify" style="color: white;">Boxo es una plataforma logística urbana que optimiza la forma en que las mercancias y las personas viajan dentro de las ciudades.</p>
 
-							<div class="row" >
+							<div class="row" id="rowCaracteristicas" >
 								<div class="6u 12u$(mobile)" id="textCaract">
 									<div class="caracteristica">
 									<div class="iconC" id="icon01"></div>
@@ -173,7 +247,7 @@
 								<div class="6u 12u$(mobile)">
 										<div id="celular"></div>
 								</div>
-						    </div>
+						    </div>-->
 							<!--<div id="textos">
 							<div id="tituloCaracteristicas">
 								<h1 id="tituloC" align="justify" style="color: #079bc3; font-size: 3.2rem;">Optimizando envíos</h1>
@@ -260,42 +334,47 @@
 									</article>
 								</div>
 							</div>
-							-->
+							
 						</div>
 					</section>
-
+				-->
 				<!-- About Me -->
-					<section id="about" class="three">
+					<section id="about" class="three" style="background-color: white;">
 						<div class="container">
-
-							<header>
-								<h2 style="color: white;">¿Quieres ser parte de nuestro equipo?</h2>
-							</header>
-
+						
+					        <div class="row">
+					          <div class="col-sm-12 text-center">
+					            <div class="title wow fadeInRight">
+					            	<h2 style="color: #2f3f4e">¿Quieres ser parte de nuestro equipo?</h2>
+					            </div>
+					          </div>
+					  		</div>
 							<center>
 								<a href="#about" class="image featured"><img id="banner" src="images/banner.jpg" alt="" /></a>
 							</center>
 
-							<p>Tienes algo de tiempo libre y quieres invertirlo en algo que te genere ganacias y sea divertido registra tu nombre y correo: </p>
+							<p align="center" style="color: #2f3f4e">Tienes algo de tiempo libre y quieres invertirlo en algo que te genere ganacias y sea divertido registra tu nombre y correo: </p>
 							<form method="post" action="#">
 								<div class="row registro" >
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Nombre" /></div>
 									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Correo" /></div>
-									<div class="12u$ 12u$(mobile)"><input type="submit" value="Registrar me" /></div>
+									<div class="12u$ 12u$(mobile)" style="text-align: center;"><input type="submit" value="Registrar me" /></div>
 								</div>
 							</form>
 						</div>
 					</section>
 
 				<!-- Contact -->
-					<section id="contact" class="four">
+					<section id="contact" class="four" style="background-color: #2f3f4e;">
 						<div class="container">
-
-							<header>
-								<h2>Contáctanos</h2>
-							</header>
-
-							<p>Escribenos y en un corto tiempo responderemos tus comentarios !.</p>
+							<div class="row">
+					          <div class="col-sm-12 text-center">
+					            <div class="title wow fadeInRight">
+					            	<h2>Contáctanos</h2>
+					            </div>
+					            <p style="color: white">Escribenos y en un corto tiempo responderemos tus comentarios !</p>
+					          </div>
+					  		</div>
 
 							<form method="post" action="#">
 								<div class="row registro">
@@ -304,17 +383,14 @@
 									<div class="12u$">
 										<textarea name="message" placeholder="Mensaje"></textarea>
 									</div>
-									<div class="12u$">
+									<div class="12u$" style="text-align: center;">
 										<input type="submit" value="Enviar Mensaje" />
 									</div>
 								</div>
 							</form>
-
 						</div>
 					</section>
-
 			</div>
-
 		<!-- Footer -->
 			<div id="footer">
 
@@ -327,12 +403,14 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/bootstrap.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/typed.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/wow.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/script.js"></script>
 

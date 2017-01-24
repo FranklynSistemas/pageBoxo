@@ -14,6 +14,8 @@
 		mobile: '(max-width: 736px)'
 	});
 
+var h = window.innerHeight;
+
 	$(function() {
 
 		var	$window = $(window),
@@ -57,7 +59,6 @@
 
 						if (href[0] != '#')
 							return;
-
 						e.preventDefault();
 
 						// Clear active and lock scrollzer until scrolling has stopped
@@ -69,6 +70,11 @@
 							t.addClass('active');
 
 					});
+
+			$('#servicioLink').click(function(e){
+				e.preventDefault();
+				$body.animate({scrollTop:h}, '2000');
+			}); 
 
 			// Initialize scrollzer.
 				var ids = [];

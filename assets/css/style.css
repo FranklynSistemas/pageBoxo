@@ -42,6 +42,7 @@ body {
 /* flecha abajo en movimiento */
 /* buscamos el selector que sea la flecha (en este caso la selección está sacada de un theme de ejemplo) */
 #flecha{
+	top:50px;
 	cursor: pointer;
 	z-index: 9;
 	width: 100px;
@@ -122,6 +123,15 @@ body {
 
 /* /flecha abajo */
 
+.LogoInit{
+	position: relative;
+	width: 150px;
+	height: 100px;
+	background-image: url(../../images/logoOld.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0 auto;
+}
 
 .textIni{
 	width: 100%;
@@ -129,8 +139,11 @@ body {
     /*background-color: rgba(8, 8, 8, 0.45);*/
     margin: 0 auto;
     position: relative;
+    color: white;
+    font-size: 25px;
     z-index: 1000;
 }
+
 
 
 #Cargando{
@@ -391,6 +404,64 @@ body {
 /* Fin Animacion */
 
 
+/*  Simulador */
+	#simulador{
+		height: 100vh;
+	}
+	
+	.intputSim{
+		text-align: center;
+		margin-bottom: 12px;
+	}
+
+	#simTitulo {
+		color: #03A9F4;
+	}
+
+	#simSubTitulo{
+		color: #03A9F4;
+	}
+
+/*  Fin Simulador */ 
+
+/* Boxo Empresas */
+	
+	#empresas{
+		background-image: url(../../images/empresa.jpg);
+		background-size: 100% 100%;
+	    background-repeat: no-repeat;
+	    height: 100vh;
+	}
+
+	#empTitulo{
+		color: white;
+	}
+	
+	#empSubTitulo{
+		color: white;
+	}
+
+	#btnConocerMas{
+		position: relative;
+	    background-color: #03A9F4;
+	    width: 20%;
+	    margin: 0 auto;
+	    margin-top: 20%;
+	    color: white;
+	    border-radius: 20px;
+	    border-style: solid;
+	    border-width: 1px;
+	    border-color: white;
+	    padding: 5px;
+	}
+
+	#btnConocerMas:hover{
+		background-color: white;
+		color: #03A9F4;
+	}
+/*  Fin Boxo Empresas */
+
+
 /* Caracteristicas */
 
 #main > section.two{
@@ -454,7 +525,38 @@ header{
 	overflow-y: hidden;
 	margin-top: 20px;
 }
-.row{
+
+.col-sm-4{
+	overflow-y: hidden;
+}
+/*   Servicios */
+.iconS{
+	color: #079bc3;
+    font-size: 60px;
+}
+
+b{
+	font-weight: 400;
+}
+
+#servicio{
+	background-color: #2f3f4e;
+	color: white;
+}
+
+#servicio h1,h2,h3,h4,b{
+	color: white;
+}
+
+#servicio p {
+	line-height: 1.3em;
+}
+
+
+
+/* Fin Servicios */
+ 
+#rowCaracteristicas{
 	margin-top: 50px;
 	padding-top: 50px;
 }
@@ -606,7 +708,7 @@ header{
 }
 
 .registro{
-	margin-top: 0px;
+	margin-top: -40px;
     padding-top: 0px;
 }
 
