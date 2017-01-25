@@ -6,13 +6,20 @@ $(window).load(function() {
 		preloaderFadeOutTime = 800;
 
 		function hidePreloader() {
-			var loadingAnimation = $('#Preloader'),
-				preloader = $('#Cargando');
+		
+		/*var loadingAnimation = $('#Preloader'),
+			preloader = $('#Cargando');
 
 			loadingAnimation.fadeOut();
 			preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
-		}
+		}*/
 
+			// will first fade out the loading animation
+		    $(".preloader").fadeOut();
+		    //then background color will fade out slowly
+		    $("#faceoff").delay(preloaderDelay).fadeOut("slow");
+		}
+		
 		hidePreloader();
 		text();
 });
@@ -33,7 +40,6 @@ function text(){
 };
 
 
-
 var w = window.innerWidth;
 var h = window.innerHeight;
 var num = 1;
@@ -42,6 +48,140 @@ var num = 1;
     	alert('Hola! Entras desde un dispositivo móvil o tablet!');
 	}
 } */
+var searchBoxOne, searchBoxTwo,map;
+var directionsService,directionsDisplay;
+
+function initAutocomplete() {  
+  directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: new google.maps.LatLng(51.219987, 4.396237),
+    zoom: 8,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  directionsDisplay.setMap(map);
+
+  var options = {
+	  componentRestrictions: {country: "co"}
+  };
+
+  // Create the search box and link it to the UI element.
+  var inputOne = $("#Origen")[0];
+  searchBoxOne = new google.maps.places.Autocomplete(inputOne, options);
+
+  // Create the search box and link it to the UI element.
+  var inputTwo = $("#Destino")[0];
+  searchBoxTwo = new google.maps.places.Autocomplete(inputTwo, options);
+
+  google.maps.event.trigger(map, 'resize');
+
+  $(window).resize(function() {
+        google.maps.event.trigger(map, 'resize');
+  });
+}
+
+
+
+ //google.maps.event.addDomListener(window, 'load', initAutocomplete);
+ google.maps.event.addDomListener(window, 'load', initAutocomplete);
+
+ $("#ConsoleSim").fadeOut();
+
+ $("#btnCalcular").click(function(e){
+ 	e.preventDefault();
+ 	if ($("#Origen").val() === "" || $("#Destino").val() === "" || $("#ValorPaquete").val() === "" ) {
+ 		$("#mensajes").css("text-align","center").fadeIn("slow").html("<p style='color: red'>¡Debes llenar todos los campos!</p>");
+ 		setTimeout(function(){$("#mensajes").fadeOut("slow")},2000);
+ 	}else{
+ 		//var distancia = google.maps.geometry.spherical.computeDistanceBetween(searchBoxOne.getPlace().geometry.location, searchBoxTwo.getPlace().geometry.location) + 2000;
+	 	paintRoute(searchBoxOne.getPlace().geometry.location, searchBoxTwo.getPlace().geometry.location);
+	 	//console.log(Math.floor(distancia/1000));
+ 	}
+ 	
+ });
+
+
+ function computeTotalDistance(result) {
+      var total = 0;
+      var ValorPaquete = parseInt($("#ValorPaquete").val());
+      //var price = 1400*Math.floor($rootScope.order.distance * 5) ;
+        var myroute = result.routes[0];
+        /*for (var i = 0; i < myroute.legs.length; i++) {
+        }*/
+        total += myroute.legs[0].distance.value;
+        var distance = total / 1000;
+        var Time = (distance/30)*60;
+        var Precio = distance < 5 ? "5000" :  distance < 10 && distance > 5 ? "10000" : "20000";
+        var Impuesto = ValorPaquete*1000 > 200000 ? (ValorPaquete * 1000) * 0.02 : 0;
+        console.log(Precio + " "+ Impuesto +" "+ eval(parseInt(Precio)+parseInt(Impuesto)));
+        var html = "<p style='color: black'>El costo del envio seria de: <b style='color: black'>"+format(eval(parseInt(Precio)+parseInt(Impuesto)))+"</b> </p>"+
+        			"<p style='color: black'>La distancia a recorrer seria de: <b style='color: black'>"+distance+" km </b></p>"+
+        			"<p style='color: black'>El tiempo aproximado del recorrido seria de: <b style='color: black'>"+getTiempo(Time)+" </b></p>"+
+        			//"<p style='color: black'>El tiempo aproximado para la recoger su paquete esta entre 30 min y 40 min</p>"+
+        			"<p style='color: black'>Seguro del 2% sobre el valor del paquete: <b style='color: black'>"+format(parseInt(Impuesto))+"</b></p>";
+
+        $("#textConsole").css("text-align","left").html(html);
+        $("#ConsoleSim").fadeIn("slow");
+        google.maps.event.trigger(map, 'resize');
+
+        
+  }
+
+  function getTiempo(time){
+  	var hours = Math.floor( time / 60 );  
+	var minutes = Math.floor( time % 60 );
+	var seconds = time % 60;
+	 
+	//Anteponiendo un 0 a los minutos si son menos de 10 
+	minutes = minutes < 10 ? '0' + minutes : minutes;
+	 
+	//Anteponiendo un 0 a los segundos si son menos de 10 
+	seconds = seconds < 10 ? '0' + seconds : seconds;
+	 
+	return hours + ":" + minutes;  // 2:41:30
+  }
+
+ function paintRoute(init, destin) {
+        
+        
+        var request = {
+           origin:      init,
+           destination: destin,
+           travelMode: google.maps.DirectionsTravelMode['DRIVING'],
+           unitSystem: google.maps.DirectionsUnitSystem['METRIC'],
+           provideRouteAlternatives: false
+        };
+    
+        directionsService.route(request, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+              directionsDisplay.setDirections(response);
+              computeTotalDistance(directionsDisplay.getDirections());
+
+          }
+        });
+       
+   }
+
+$("#ValorPaquete").keyup(function(){
+	$(this).val(format($(this).val()));
+});
+
+
+function format(input)
+{
+    var num = input.toString().replace(/\./g,'');
+    if(!isNaN(num)){
+        num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+        num = num.split('').reverse().join('').replace(/^[\.]/,'');
+        return num
+    }else{ 
+        console.log('Solo se permiten numeros');
+        //input.value = input.value.replace(/[^\d\.]*/g,'');
+    }
+}
+
 
 var wow = new WOW(
   {

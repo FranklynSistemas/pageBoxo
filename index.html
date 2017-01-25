@@ -27,9 +27,19 @@
 	    <link rel="apple-touch-icon" sizes="114x114" href="images/icon.png">
 	</head>
 	<body>
+		<!--
 		<div id="Cargando">
           <div id="Preloader"></div>
     	</div>
+    	-->
+
+	    <!-- Preloader -->
+	     <div id="faceoff">
+	        <div id="preloader"></div>
+	        <div class="preloader-section"></div>
+	     </div>
+	    <!-- Preloader end -->
+
 		<!-- Header -->
 			<div id="header">
 
@@ -159,21 +169,21 @@
 					          </div>
 					        </div>
 					        <div class="row" style="margin-top: 20px;">
-					          <div class="col-sm-4">
+					          <div id="money" class="col-md-4 blockServicios">
 					            <div class="app-block wow bounceInUp" data-wow-delay=".1s">
 					              <h2><b>Bajo costo</b></h2>
 					              <i class="fa fa-money iconS"></i> 
 					              <p align="center">Hacemos tus envios con los mejores costos del mercado ! </p>
 					            </div>            
 					          </div>
-					          <div class="col-sm-4">
+					          <div id="rapido" class="col-md-4 blockServicios">
 					            <div class="app-block wow bounceInUp" data-wow-delay=".2s">
 					              <h2><b>Rápido</b></h2>
 					              <i class="fa fa-bolt iconS"></i>
 					              <p align="center">Llevamos tus envios rapido y si nos demoramos 20 minutos más de lo estipulado para el envio, tu servicio es <b>Gratis.</b></p>
 					            </div>            
 					          </div>
-					          <div class="col-sm-4">
+					          <div id="seguro" class="col-md-4 blockServicios">
 					            <div class="app-block wow bounceInUp" data-wow-delay=".3s">
 					              <h2><b>Seguro</b></h2>
 					              <i class="fa fa-lock iconS"></i> 
@@ -193,14 +203,24 @@
 						            </div>
 					            </div>
 					            </div>
-					        	<form method="post" action="#" style="width: 100%; overflow-y: hidden;">
-						        	<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".1s"><input class="intputSim" type="text" name="origen" placeholder="Origen Ejem. Calle 87 # 67 -63 " /></div>
-									<div class="12u$ 12u$(mobile)  wow bounceInUp" data-wow-delay=".2s"><input class="intputSim" type="text" name="destino" placeholder="Destino Ejem. Calle 87 # 67 -63" /></div>
-									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".3s"><input class="intputSim" type="number" name="valor" placeholder="Valoración de paquete Ejem. 50.000" /></div>
-									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".4s"><input type="submit" value="Simular envio" /></div>
+					        	<form  style="width: 100%;">
+						        	<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".1s"><input id="Origen" class="intputSim" type="text" name="origen" placeholder="Origen Ejem. Calle 87 # 67 -63 " />
+						        	</div>
+									<div class="12u$ 12u$(mobile)  wow bounceInUp" data-wow-delay=".2s"><input id="Destino" class="intputSim" type="text" name="destino" placeholder="Destino Ejem. Calle 87 # 67 -63" /></div>
+									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".3s"><input id="ValorPaquete" class="intputSim" type="number" name="valor" placeholder="Valoración de paquete Ejem. 50.000" /></div>
+									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".4s"><input id="btnCalcular" type="submit" value="Simular envio" /></div>
 								</form>
+								<div id="mensajes"></div>
+								<div id="ConsoleSim" class="row" style="margin-top: 20px">
+									<div class="col-sm-6" id="textConsole"></div>
+									<div class="col-sm-6" id="contentMap">
+										<div id="map"></div>
+									</div>
+								</div>
+								
 					        </div>
 					</section>
+
 					<section id="empresas" class="emp">
 						<div class="container">
 					        <div class="row">
@@ -344,7 +364,7 @@
 						
 					        <div class="row">
 					          <div class="col-sm-12 text-center">
-					            <div class="title wow fadeInRight">
+					            <div id="nosotros" class="title wow fadeInRight">
 					            	<h2 style="color: #2f3f4e">¿Quieres ser parte de nuestro equipo?</h2>
 					            </div>
 					          </div>
@@ -358,7 +378,7 @@
 								<div class="row registro" >
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Nombre" /></div>
 									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Correo" /></div>
-									<div class="12u$ 12u$(mobile)" style="text-align: center;"><input type="submit" value="Registrar me" /></div>
+									<div class="12u$ 12u$(mobile)" style="text-align: center;"><input type="submit" value="Pre registrarme" /></div>
 								</div>
 							</form>
 						</div>
@@ -412,7 +432,11 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/wow.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZqzA9D5OdYVvmZ51pdexYhClMDCyiW5c&libraries=geometry,places"></script>
+			<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+			<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZqzA9D5OdYVvmZ51pdexYhClMDCyiW5c&libraries=places"></script>-->
 			<script src="assets/js/script.js"></script>
+			
 
 
 	</body>

@@ -1,5 +1,5 @@
 *{
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 body {
@@ -8,6 +8,128 @@ body {
 	height: 100%;
 
 }
+
+/*
+========================================================================
+# - 1.3 - Preloader styles
+------------------------------------------------------------------------
+*/
+
+#faceoff {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#preloader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #2196F3;
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    z-index: 1001;
+}
+
+#preloader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #274f6f;
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#preloader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #5b87ab;
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+#faceoff .preloader-section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0);  /* IE 9 */
+    transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+}
+
+/* Loaded */
+.loaded #faceoff .preloader-section {
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateY(-100%);  /* IE 9 */
+            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #preloader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+.loaded #faceoff {
+    visibility: hidden;
+
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateY(-100%);  /* IE 9 */
+            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.3s 1s ease-out;
+            transition: all 0.3s 1s ease-out;
+}
+/* Fin style Preloader */
 
 /* Typed */
 .typed-cursor{
@@ -408,7 +530,7 @@ body {
 	#simulador{
 		height: 100vh;
 	}
-	
+
 	.intputSim{
 		text-align: center;
 		margin-bottom: 12px;
@@ -421,7 +543,27 @@ body {
 	#simSubTitulo{
 		color: #03A9F4;
 	}
-
+	#mensajes{
+	    text-align: left;
+	}
+	#textConsole {
+		width: 50%;
+		top: 30px;
+	}
+	#textConsole p{
+		margin-bottom: -12px;
+		font-size: 20px;
+	}
+	#contentMap{
+		width: 50%;
+    	height: 250px;
+	    overflow-y: hidden;
+	}
+	#map{
+		overflow:visible;
+	    width:auto;
+	    height:100%;
+	}
 /*  Fin Simulador */ 
 
 /* Boxo Empresas */
@@ -542,6 +684,7 @@ b{
 #servicio{
 	background-color: #2f3f4e;
 	color: white;
+	height: 100vh;
 }
 
 #servicio h1,h2,h3,h4,b{
@@ -552,7 +695,19 @@ b{
 	line-height: 1.3em;
 }
 
+.blockServicios{
+   -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
 
+.blockServicios:hover{
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
 
 /* Fin Servicios */
  
@@ -742,6 +897,7 @@ and (max-device-width : 480px) {
 		height: 93vh;
 	}*/
 
+
 	.row{
 		margin-top: 25px;
     	padding-top: 0px;
@@ -886,6 +1042,32 @@ and (max-device-width : 480px) {
 		height: 25px;
 	}
 	/*  Fin Animación */
+
+	/* Servicios */
+	#servicio{
+		height: 170vh;
+	}
+	/* Fin Servicios */
+
+	/* Simulador */
+		#simulador{
+			height: 120vh;
+		}
+
+		#textConsole p {
+			margin-bottom: -7px;
+		    font-size: 14px;
+		    line-height: 20px;
+		}
+
+		#textConsole{
+			width: 45%;
+    		left: 20px;
+    		text-align: center !important;
+		}
+		
+	/* Fin Simulador */
+
 }
 
 @media only screen
@@ -1033,6 +1215,39 @@ and (max-device-width : 720px) {
 		height: 25px;
 	}
 	/*  Fin Animación */
+
+	/* Sevicios */
+	#servicio{
+		height: 240vh;
+	}
+
+	#money{
+		left: 15%;
+	}
+
+	#seguro{
+		left: 20%;
+	}
+
+	/* Fin Servicios */
+	
+	/* Simulador */
+	#simulador{
+	    height: 200vh;
+	}
+
+	/* fin simulador */
+
+
+	/* Contactenos */
+	.col-sm-12{
+		width: 100%
+	}
+	/* Fin Contactenos */
+
+	#central{
+		margin-top: -200px;
+	}
 
 }
 

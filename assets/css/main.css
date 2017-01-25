@@ -2419,7 +2419,7 @@
 				position: fixed;
 				top: 0;
 				width: 3.25em;
-				z-index: 10001;
+				z-index: 10000;
 			}
 
 				#headerToggle .toggle {
