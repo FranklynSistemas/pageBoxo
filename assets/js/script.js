@@ -22,7 +22,37 @@ $(window).load(function() {
 		
 		hidePreloader();
 		text();
+		carouser();
 });
+
+function carouser(){
+	console.log("inicia carrusel");
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    autoWidth:true,
+	    animateOut: 'slideOutDown',
+    	animateIn: 'flipInX',
+	    responsiveClass:true,
+	    stagePadding:30,
+    	smartSpeed:450,
+    	dots: true,
+	    responsive:{
+	        0:{
+	            items:1,
+	            dots:true
+	        },
+	        600:{
+	            items:2,
+	        },
+	        1000:{
+	            items:3,
+	            //nav:true,
+	            loop:true
+	        }
+	    }
+	});
+}
 
 function showbtn(){
 	$("#flecha").fadeIn(5);
@@ -43,6 +73,7 @@ function text(){
 var w = window.innerWidth;
 var h = window.innerHeight;
 var num = 1;
+var toggle = true;
 /*function init(){
 	if($.browser.device = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))){
     	alert('Hola! Entras desde un dispositivo móvil o tablet!');
@@ -113,12 +144,14 @@ function initAutocomplete() {
         total += myroute.legs[0].distance.value;
         var distance = total / 1000;
         var Time = (distance/30)*60;
-        var Precio = distance < 5 ? "5000" :  distance < 10 && distance > 5 ? "10000" : "20000";
+        var Precio = getPrecio(distance);
         var Impuesto = ValorPaquete*1000 > 200000 ? (ValorPaquete * 1000) * 0.02 : 0;
-        console.log(Precio + " "+ Impuesto +" "+ eval(parseInt(Precio)+parseInt(Impuesto)));
-        var html = "<p style='color: black'>El costo del envio seria de: <b style='color: black'>"+format(eval(parseInt(Precio)+parseInt(Impuesto)))+"</b> </p>"+
+        var IdaYVuel = toggle ? Precio - 1200 : 0;
+        console.log(Precio + " "+ Impuesto +" "+ IdaYVuel);
+        var html = "<p style='color: black'>El costo del envío seria de: <b style='color: black'>"+format(eval(parseInt(Precio)+parseInt(Impuesto)+IdaYVuel))+"</b> </p>"+
         			"<p style='color: black'>La distancia a recorrer seria de: <b style='color: black'>"+distance+" km </b></p>"+
         			"<p style='color: black'>El tiempo aproximado del recorrido seria de: <b style='color: black'>"+getTiempo(Time)+" </b></p>"+
+        			"<p style='color: black'>El costo por ida y vuelta es de: <b style='color: black'>"+format(IdaYVuel)+" </b></p>"+
         			//"<p style='color: black'>El tiempo aproximado para la recoger su paquete esta entre 30 min y 40 min</p>"+
         			"<p style='color: black'>Seguro del 2% sobre el valor del paquete: <b style='color: black'>"+format(parseInt(Impuesto))+"</b></p>";
 
@@ -127,20 +160,6 @@ function initAutocomplete() {
         google.maps.event.trigger(map, 'resize');
 
         
-  }
-
-  function getTiempo(time){
-  	var hours = Math.floor( time / 60 );  
-	var minutes = Math.floor( time % 60 );
-	var seconds = time % 60;
-	 
-	//Anteponiendo un 0 a los minutos si son menos de 10 
-	minutes = minutes < 10 ? '0' + minutes : minutes;
-	 
-	//Anteponiendo un 0 a los segundos si son menos de 10 
-	seconds = seconds < 10 ? '0' + seconds : seconds;
-	 
-	return hours + ":" + minutes;  // 2:41:30
   }
 
  function paintRoute(init, destin) {
@@ -163,6 +182,69 @@ function initAutocomplete() {
         });
        
    }
+
+function getPrecio(distance){
+	/*
+		banderazo = 4500
+		km adicional = 700 pesos (hasta 5 km)
+		km adicional = 800 pesos (6 km a 15 km)
+		km adicional = 900 pesos (16 km a 20 km)
+		km adicional = 1000 pesos despues de 20 km
+		hasta 10 minutos de espera = 500 Pesos mas
+		Ida y vuelta = 1200 menos del precio inicial
+		si pasa de 10 minutos y no contesta la persona = Se comunica con la persona y se hace un acuerdo.
+	*/ 
+
+	var banderazo = 4500;
+	var adicional = 0;
+	if(3 >= distance){
+		return banderazo;
+	}else if(distance > 3 && distance <= 5){
+		adicional = Math.floor(distance % 3);
+		for (var i = 0; i < adicional; i++) {
+			banderazo+=700;
+		}
+		return banderazo;
+	}else if (distance > 5 && distance <= 15) {
+		banderazo = 5900;
+		adicional = Math.floor(distance - 5);
+		banderazo+= adicional*800;
+		return banderazo;
+	}else if(distance > 15 && distance <= 20) {
+		banderazo = 13900;
+		adicional = Math.floor(distance - 15);
+		banderazo+= adicional*900;
+		return banderazo;
+	}else{
+		banderazo = 18400;
+		adicional = Math.floor(distance - 20);
+		banderazo+= adicional*1000;
+		return banderazo;
+	}
+}
+
+function getTiempo(time){
+  	var hours = Math.floor( time / 60 );  
+	var minutes = Math.floor( time % 60 );
+	var seconds = time % 60;
+	 
+	//Anteponiendo un 0 a los minutos si son menos de 10 
+	minutes = minutes < 10 ? '0' + minutes : minutes;
+	 
+	//Anteponiendo un 0 a los segundos si son menos de 10 
+	seconds = seconds < 10 ? '0' + seconds : seconds;
+	 
+	return hours + ":" + minutes;  // 2:41:30
+}
+
+$("#toggleIdaV").change(function() {
+	if($(this).prop('checked')){
+		toggle = true;
+	}else{
+		toggle = false;
+	};
+});
+
 
 $("#ValorPaquete").keyup(function(){
 	$(this).val(format($(this).val()));

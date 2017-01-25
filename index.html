@@ -12,10 +12,16 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!-- Bootstrap -->
     	<link href="assets/css/bootstrap.css" rel="stylesheet">
-    	<!-- Animate.css -->
-    	<link rel="stylesheet" href="assets/css/animate.css">
+    	<!-- Animate.css 
+    	<link rel="stylesheet" href="assets/css/animate.css">-->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 		<link href="https://fonts.googleapis.com/css?family=Pavanam" rel="stylesheet">
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<!-- OWL Carousel -->
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -70,12 +76,12 @@
 							-->
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicio</span></a></li>
-								<li><a href="#servicio" id="servicio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Que es</span></a></li>
-								<li><a href="#simulador" id="simulador-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Simulador</span></a></li>
-								<li><a href="#empresas" id="empresas-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Empresas</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Registrate</span></a></li>
+								<li><a href="#servicio" id="servicio-link" class="skel-layers-ignoreHref"><span class="icon fa-question">¿Que es?</span></a></li>
+								<li><a href="#simulador" id="simulador-link" class="skel-layers-ignoreHref"><span class="icon fa-calculator">Simulador</span></a></li>
+								<li><a href="#empresas" id="empresas-link" class="skel-layers-ignoreHref"><span class="icon fa-building">Empresas</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-book">Registrate</span></a></li>
+								<li><a href="#app" id="app-link" class="skel-layers-ignoreHref"><span class="icon fa-mobile">Boxo App</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contácto</span></a></li>
-								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Boxoempresa</span></a></li>
 								
 							</ul>
 						</nav>
@@ -164,8 +170,8 @@
 					            <div class="title wow fadeInRight">
 					              <div class="LogoInit"></div>
 					            </div>
-					              <h3>Lo quieres, Lo pides, Lo tienes</h3>
-					              <h4>Boxo es una plataforma logística urbana que optimiza la forma en que las mercancias y las personas viajan dentro de las ciudades.</h4>
+					              <h3 class="title wow fadeInRight">Lo quieres, Lo pides, Lo tienes</h3>
+					              <h4 class="title wow fadeInLeft">Boxo es una plataforma logística urbana que optimiza la forma en que las mercancias y las personas viajan dentro de las ciudades.</h4>
 					          </div>
 					        </div>
 					        <div class="row" style="margin-top: 20px;">
@@ -208,7 +214,10 @@
 						        	</div>
 									<div class="12u$ 12u$(mobile)  wow bounceInUp" data-wow-delay=".2s"><input id="Destino" class="intputSim" type="text" name="destino" placeholder="Destino Ejem. Calle 87 # 67 -63" /></div>
 									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".3s"><input id="ValorPaquete" class="intputSim" type="number" name="valor" placeholder="Valoración de paquete Ejem. 50.000" /></div>
-									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".4s"><input id="btnCalcular" type="submit" value="Simular envio" /></div>
+									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".4s">
+										¿Ida y vuelta? <input id="toggleIdaV" type="checkbox" checked data-toggle="toggle" data-on="Si" data-off="No" data-onstyle="success">
+									</div>
+									<div class="12u$ 12u$(mobile) wow bounceInUp" data-wow-delay=".5s" style="margin-top: 10px;"><input id="btnCalcular" type="submit" value="Simular envío" /></div>
 								</form>
 								<div id="mensajes"></div>
 								<div id="ConsoleSim" class="row" style="margin-top: 20px">
@@ -224,16 +233,14 @@
 					<section id="empresas" class="emp">
 						<div class="container">
 					        <div class="row">
-					        	<div class="col-sm-12 text-center" style="    	margin-top: 12%;
-																			    background-color: rgba(43, 81, 111, 0.85);
-																			    border-radius: 25px;">
-						            <div class="title wow fadeInRight" style="margin-top: -40px;">
-							              <h2 id="empTitulo">Empresas</h2>
-							              <h4 id="empSubTitulo">Conoce las ventajas de mensajaria que tenemos para ti.</h4>
+					        	<div class="col-sm-12 text-center">
+						            <div class="title wow fadeInRight" style="margin-top: 15%;">
+							              <h2 id="empTitulo"><b>Boxo</b> Empresas</h2>
+							              <h3 id="empSubTitulo">La mejor solución para sus envíos y tramites se encuentra con nosotros, ponemos las nuevas tecnologías a su servicio.</h3>
 						            </div>
 					            </div>
 					        </div>
-					        <div id="btnConocerMas"><span>Conocer Más</span></div>
+					        <div id="btnConocerMas" class="animated infinite bounce"><span>Conocer Más</span></div>
 					    </div>
 					</section>
 				<!-- Portfolio 
@@ -364,17 +371,17 @@
 						
 					        <div class="row">
 					          <div class="col-sm-12 text-center">
-					            <div id="nosotros" class="title wow fadeInRight">
+					            <div id="nosotros" class="title wow fadeInRight" data-wow-delay=".1s">
 					            	<h2 style="color: #2f3f4e">¿Quieres ser parte de nuestro equipo?</h2>
 					            </div>
 					          </div>
 					  		</div>
-							<center>
+							<center class="title wow fadeInLeft" data-wow-delay=".2s">
 								<a href="#about" class="image featured"><img id="banner" src="images/banner.jpg" alt="" /></a>
 							</center>
 
-							<p align="center" style="color: #2f3f4e">Tienes algo de tiempo libre y quieres invertirlo en algo que te genere ganacias y sea divertido registra tu nombre y correo: </p>
-							<form method="post" action="#">
+							<p align="center" class="title wow fadeInRight" data-wow-delay=".3s" style="color: #2f3f4e">Tienes tiempo libre y quieres invertirlo en algo que te genere ganancias, registra tu nombre y correo y te enviaremos más información sobre esta nueva oportunidad.</p>
+							<form method="post" action="#" class="title wow fadeInLeft" data-wow-delay=".4s">
 								<div class="row registro" >
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Nombre" /></div>
 									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Correo" /></div>
@@ -383,7 +390,35 @@
 							</form>
 						</div>
 					</section>
-
+					<section id="app">
+					<div class="container" >
+          
+            <!-- TITLE -->
+            			<div class="row">
+					        <div class="col-sm-12 text-center">
+					           	<div id="nosotros" class="title wow fadeInRight" data-wow-delay=".1s">
+					            	<h2><b>Boxo</b> App</h2>
+					            </div>
+					        </div>
+					  	</div>
+             
+						<div class="owl-carousel wow fadeInLeft" style="margin-top: 10px;" data-wow-delay=".2s">
+							<div><img src="images/apps-prev/app1.jpg" alt="client"></div>
+							<div><img src="images/apps-prev/app2.jpg" alt="client"></div>
+							<div><img src="images/apps-prev/app3.jpg" alt="client"></div>
+							<div><img src="images/apps-prev/app4.jpg" alt="client"></div>
+							<div><img src="images/apps-prev/app5.jpg" alt="client"></div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+					    <div class="col-sm-6 wow fadeInLeft" class="wow fadeInLeft" data-wow-delay=".3s">
+					    	<div id="disAndroid"></div>
+					    </div>
+					    <div class="col-sm-6 wow fadeInRight" data-wow-delay=".3s">
+					    	<div id="disOS"></div>
+					    </div>
+					</div>
+				</section>
 				<!-- Contact -->
 					<section id="contact" class="four" style="background-color: #2f3f4e;">
 						<div class="container">
@@ -392,7 +427,7 @@
 					            <div class="title wow fadeInRight">
 					            	<h2>Contáctanos</h2>
 					            </div>
-					            <p style="color: white">Escribenos y en un corto tiempo responderemos tus comentarios !</p>
+					            <p style="color: white">Escribenos y encorto tiempo responderemos tus comentarios !</p>
 					          </div>
 					  		</div>
 
@@ -424,6 +459,7 @@
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/bootstrap.min.js"></script>
+			<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
@@ -431,6 +467,9 @@
 			<script src="assets/js/typed.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/wow.js"></script>
+			<!-- OWL CAROUSEL -->    
+    		<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+
 			<script src="assets/js/main.js"></script>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZqzA9D5OdYVvmZ51pdexYhClMDCyiW5c&libraries=geometry,places"></script>
 			<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
